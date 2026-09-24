@@ -119,6 +119,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Digital%20Art/Morisaki%20Bookshop.jpg',
       '/art/Digital%20Art/Rain.jpg',
       '/art/Digital%20Art/Rare%20Moon.jpg',
+      '/art/Digital%20Art/Room%20416.jpg',
       '/art/Digital%20Art/Spain%20World%20Cup%202026.jpg',
       '/art/Digital%20Art/Starry%20night%20with%20tent.jpg',
       '/art/Digital%20Art/Utsob2.jpg',
