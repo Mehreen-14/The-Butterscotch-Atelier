@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  padding: clamp(5rem, 12vh, 9rem) 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(217, 153, 79, 0.16) 0, transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(138, 90, 43, 0.12) 0, transparent 40%),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 1.4rem;
+  justify-items: start;
+}
+
+.hero-title {
+  font-size: clamp(3.4rem, 9vw, 6.5rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--butterscotch-dark);
+}
+
+.hero-lede {
+  max-width: 52ch;
+  font-size: 1.15rem;
+  color: var(--cocoa-soft);
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+.teaser-section {
+  background:
+    linear-gradient(rgba(250, 244, 234, 0.92), rgba(250, 244, 234, 0.92)),
+    url('/art/Crafts/6172471825674211451.jpg') center / cover no-repeat;
+}
+
+.teaser-inner {
+  max-width: 640px;
+}
+
+.teaser-text p:not(.section-kicker) {
+  color: var(--cocoa-soft);
+  margin: 0 0 1.8rem;
+}
+
+@media (max-width: 560px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}

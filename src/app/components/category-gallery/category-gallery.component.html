@@ -1,0 +1,49 @@
+@if (category(); as cat) {
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Collection</span>
+      <h1 class="page-title">{{ cat.name }}</h1>
+      <p class="section-lede">{{ cat.items.length }} {{ cat.items.length === 1 ? 'piece' : 'pieces' }} in this collection.</p>
+      <a class="btn btn-ghost" routerLink="/gallery">All collections</a>
+    </div>
+  </section>
+
+  <section class="section category-section">
+    <div class="container">
+      <div class="category-nav">
+        @for (other of categories(); track other.slug) {
+          <a class="filter-chip" [class.active]="other.slug === cat.slug" [routerLink]="['/gallery', other.slug]">
+            {{ other.name }}
+          </a>
+        }
+      </div>
+
+      <div class="masonry">
+        @for (item of items(); track item.src; let i = $index) {
+          <button
+            class="art-cell"
+            style="animation-delay: {{ (i % 10) * 45 }}ms"
+            (click)="open(i)"
+            [attr.aria-label]="'View ' + item.title">
+            @if (item.type === 'video') {
+              <video [src]="item.src" muted playsinline preload="metadata"></video>
+              <span class="cell-badge video">&#9654; Video</span>
+            } @else {
+              <img [src]="item.src" [alt]="item.title" loading="lazy" />
+            }
+            <span class="cell-badge category">{{ item.category }}</span>
+          </button>
+        }
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Oops</span>
+      <h1 class="page-title">Collection not found</h1>
+      <p class="section-lede">This collection does not exist (or it is still empty).</p>
+      <a class="btn btn-primary" routerLink="/gallery">Back to gallery</a>
+    </div>
+  </section>
+}

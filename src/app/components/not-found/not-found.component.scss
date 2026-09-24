@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.not-found {
+  padding: clamp(6rem, 15vh, 10rem) 0;
+  text-align: center;
+}
+
+.big {
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--cream-dark);
+  display: block;
+}
+
+.not-found .section-lede {
+  margin: 0 auto 2rem;
+}

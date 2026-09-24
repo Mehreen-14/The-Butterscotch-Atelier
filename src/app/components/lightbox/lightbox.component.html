@@ -1,0 +1,35 @@
+@if (lightbox.open()) {
+  <div class="lightbox" (click)="lightbox.close()" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Close viewer" (click)="lightbox.close(); $event.stopPropagation()">
+      &times;
+    </button>
+
+    <button
+      class="lightbox-arrow prev"
+      aria-label="Previous artwork"
+      (click)="lightbox.prev(); $event.stopPropagation()">
+      &#10094;
+    </button>
+
+    @let current = lightbox.items()[lightbox.index()];
+    <figure class="lightbox-stage" (click)="$event.stopPropagation()">
+      @if (current.type === 'video') {
+        <video [src]="current.src" controls autoplay playsinline></video>
+      } @else {
+        <img [src]="current.src" [alt]="current.title" />
+      }
+      <figcaption>
+        <span class="lightbox-title">{{ current.title }}</span>
+        <span class="lightbox-category">{{ current.category }}</span>
+        <span class="lightbox-counter">{{ lightbox.index() + 1 }} / {{ lightbox.items().length }}</span>
+      </figcaption>
+    </figure>
+
+    <button
+      class="lightbox-arrow next"
+      aria-label="Next artwork"
+      (click)="lightbox.next(); $event.stopPropagation()">
+      &#10095;
+    </button>
+  </div>
+}

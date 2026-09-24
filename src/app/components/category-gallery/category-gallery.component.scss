@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.category-section {
+  padding-top: 1rem;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+
+.filter-chip {
+  text-decoration: none;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--cocoa-soft);
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(90, 60, 30, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--butterscotch);
+  color: var(--butterscotch-dark);
+  transform: translateY(-2px);
+}
+
+.filter-chip.active {
+  background: linear-gradient(135deg, var(--butterscotch) 0%, var(--butterscotch-dark) 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(185, 122, 53, 0.4);
+}

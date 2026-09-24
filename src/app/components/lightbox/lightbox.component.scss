@@ -1,0 +1,134 @@
+:host {
+  display: contents;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(32, 22, 14, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  animation: fade-in 0.2s ease;
+}
+
+.lightbox-stage {
+  margin: 0;
+  max-width: min(1100px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lightbox-stage img,
+.lightbox-stage video {
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: 6px;
+  box-shadow: var(--shadow-lg);
+  animation: scale-in 0.25s ease;
+}
+
+.lightbox-stage video {
+  width: auto;
+  background: #000;
+}
+
+.lightbox-stage figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  color: #f3e7d4;
+  font-size: 0.9rem;
+}
+
+.lightbox-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.lightbox-category {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--butterscotch);
+}
+
+.lightbox-counter {
+  color: #b09a80;
+  font-size: 0.8rem;
+}
+
+.lightbox-arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-arrow:hover {
+  background: var(--butterscotch);
+  transform: scale(1.05);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: var(--butterscotch);
+}
+
+@media (max-width: 720px) {
+  .lightbox {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .lightbox-arrow {
+    order: 2;
+    width: 46px;
+    height: 46px;
+  }
+
+  .lightbox-stage {
+    order: 1;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}

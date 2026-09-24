@@ -1,0 +1,58 @@
+<section class="gallery-hero">
+  <div class="container">
+    <span class="eyebrow">The collection</span>
+    <h1 class="gallery-title">Gallery</h1>
+    <div class="title-rule" aria-hidden="true"><i></i><span></span><i></i></div>
+    
+    <div class="gallery-stats">
+      <span class="stat"><b>{{ totalItems() }}</b>pieces</span>
+      <span class="stat"><b>{{ categories().length }}</b>collections</span>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-body">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-chip" [class.active]="activeSlug() === null" (click)="setCategory(null)">
+        All <span class="chip-num">{{ totalItems() }}</span>
+      </button>
+      @for (category of categories(); track category.slug) {
+        <button
+          class="filter-chip"
+          [class.active]="activeSlug() === category.slug"
+          (click)="setCategory(category.slug)">
+          {{ category.name }} <span class="chip-num">{{ category.items.length }}</span>
+        </button>
+      }
+    </div>
+
+    @if (visibleItems().length > 0) {
+      <div class="masonry">
+        @for (item of visibleItems(); track item.src; let i = $index) {
+          <button
+            class="art-cell"
+            style="animation-delay: {{ (i % 10) * 45 }}ms"
+            (click)="open(i)"
+            [attr.aria-label]="'View ' + item.title">
+            @if (item.type === 'video') {
+              <video [src]="item.src" muted playsinline preload="metadata"></video>
+              <span class="cell-badge video">&#9654; Video</span>
+            } @else {
+              <img [src]="item.src" [alt]="item.title" loading="lazy" />
+            }
+            <span class="cell-badge category">{{ item.category }}</span>
+          </button>
+        }
+      </div>
+    } @else {
+      <p class="empty-note">Nothing here yet — check back soon.</p>
+    }
+
+    @if (activeSlug() !== null) {
+      <div class="clear-filter">
+        <a class="btn btn-ghost" (click)="setCategory(null)">Show all collections</a>
+      </div>
+    }
+  </div>
+</section>

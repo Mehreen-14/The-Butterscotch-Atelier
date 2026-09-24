@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <img class="brand-logo" src="/logo.png" alt="The Butterscotch Atelier logo" />
+      <span class="brand-name">The Butterscotch Atelier</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" [class.open]="menuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">Gallery</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+    </nav>
+  </div>
+</header>
