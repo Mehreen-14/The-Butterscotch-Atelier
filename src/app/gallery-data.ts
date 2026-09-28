@@ -22,6 +22,7 @@ export const GALLERY: GalleryCategory[] = [
     slug: 'ambigram',
     items: [
       '/art/Ambigram/Bangla%20ambigram.jpg',
+      '/art/Ambigram/MehreenMaliha.jpg',
     ]
   },
   {
@@ -91,6 +92,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Crafts/6174723625487896894.jpg',
       '/art/Crafts/6174723625487896895.jpg',
       '/art/Crafts/6174723625487896901.jpg',
+      '/art/Crafts/Quiling(under%20the%20sea).jpg',
       '/art/Crafts/Starry%20Night%20with%20clay.jpg',
     ]
   },
@@ -101,18 +103,19 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Digital%20Art/6059801806860566790.jpg',
       '/art/Digital%20Art/6059801806860566792.jpg',
       '/art/Digital%20Art/6059801806860566794.jpg',
-      '/art/Digital%20Art/6172471825674211460.jpg',
       '/art/Digital%20Art/6172471825674211510.jpg',
       '/art/Digital%20Art/6174723625487896908.jpg',
+      '/art/Digital%20Art/6183943597422481677.jpg',
       '/art/Digital%20Art/6271732076117692420.jpg',
       '/art/Digital%20Art/6291569009639493338.jpg',
       '/art/Digital%20Art/A%20simple%20life.jpg',
+      '/art/Digital%20Art/Bangladesh%20with%20flag.jpg',
       '/art/Digital%20Art/Bougenvilia.jpg',
-      '/art/Digital%20Art/Coffee%20house.jpg',
       '/art/Digital%20Art/Cover%20page.jpg',
       '/art/Digital%20Art/Doctor%20on%20the%20edge.jpg',
       '/art/Digital%20Art/Himachal.jpg',
       '/art/Digital%20Art/Lantern.jpg',
+      '/art/Digital%20Art/Leaf.jpg',
       '/art/Digital%20Art/Lily.jpg',
       '/art/Digital%20Art/Mandala%202.jpg',
       '/art/Digital%20Art/Mandala.jpg',
@@ -124,6 +127,14 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Digital%20Art/Starry%20night%20with%20tent.jpg',
       '/art/Digital%20Art/Utsob2.jpg',
       '/art/Digital%20Art/Your%20paragraph%20text.jpg',
+    ]
+  },
+  {
+    name: 'Doodles',
+    slug: 'doodles',
+    items: [
+      '/art/Doodles/6183943597422481675.jpg',
+      '/art/Doodles/6183943597422481676.jpg',
     ]
   },
   {
@@ -157,9 +168,18 @@ export const GALLERY: GalleryCategory[] = [
     ]
   },
   {
+    name: 'Origami',
+    slug: 'origami',
+    items: [
+      '/art/Origami/Flower.jpg',
+      '/art/Origami/Ice-cream.jpg',
+    ]
+  },
+  {
     name: 'Photography',
     slug: 'photography',
     items: [
+      '/art/Photography/20260926_111355.jpg',
       '/art/Photography/6172471825674211447.jpg',
       '/art/Photography/6172471825674211449.jpg',
       '/art/Photography/6172471825674211450.jpg',
@@ -182,8 +202,12 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Photography/6174723625487896900.jpg',
       '/art/Photography/6174723625487896906.jpg',
       '/art/Photography/6174723625487896909.jpg',
+      '/art/Photography/6183943597422481723.jpg',
       '/art/Photography/6289386917145022279.jpg',
       '/art/Photography/6328085551734525389.jpg',
+      '/art/Photography/DU.jpg',
+      '/art/Photography/khulna.jpg',
+      '/art/Photography/Lights.jpg',
     ]
   },
   {
@@ -243,10 +267,21 @@ export const GALLERY: GalleryCategory[] = [
     ]
   },
   {
+    name: 'Typography',
+    slug: 'typography',
+    items: [
+      '/art/Typography/6179430553162028190.jpg',
+      '/art/Typography/areh_chacha_apne.jpg',
+      '/art/Typography/Coffee%20house.jpg',
+      '/art/Typography/fa5fe075f52f71520458711105a665dd.jpg',
+    ]
+  },
+  {
     name: 'Videos',
     slug: 'videos',
     items: [
       '/art/Videos/rain%2520(Copy).mp4',
+      '/art/Videos/VID_20260927_234924_552.mp4',
       '/art/Videos/video6294203516349062632.mp4',
     ]
   },
