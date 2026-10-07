@@ -23,6 +23,7 @@ export const GALLERY: GalleryCategory[] = [
     items: [
       '/art/Ambigram/Bangla%20ambigram.jpg',
       '/art/Ambigram/MehreenMaliha.jpg',
+      '/art/Ambigram/Months.jpg',
     ]
   },
   {
@@ -56,6 +57,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Canvas/6172471825674211543.jpg',
       '/art/Canvas/6174723625487896887.jpg',
       '/art/Canvas/6174723625487896888.jpg',
+      '/art/Canvas/6186195397236166655.jpg',
     ]
   },
   {
@@ -85,7 +87,6 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Crafts/6172471825674211536.jpg',
       '/art/Crafts/6172471825674211537.jpg',
       '/art/Crafts/6172471825674211538.jpg',
-      '/art/Crafts/6172471825674211540.jpg',
       '/art/Crafts/6172471825674211541.jpg',
       '/art/Crafts/6172705205607141827.jpg',
       '/art/Crafts/6174723625487896892.jpg',
@@ -94,6 +95,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Crafts/6174723625487896901.jpg',
       '/art/Crafts/Quiling(under%20the%20sea).jpg',
       '/art/Crafts/Starry%20Night%20with%20clay.jpg',
+      '/art/Crafts/String%20Lights.jpg',
     ]
   },
   {
@@ -110,6 +112,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Digital%20Art/6291569009639493338.jpg',
       '/art/Digital%20Art/A%20simple%20life.jpg',
       '/art/Digital%20Art/Bangladesh%20with%20flag.jpg',
+      '/art/Digital%20Art/Bookshop.jpg',
       '/art/Digital%20Art/Bougenvilia.jpg',
       '/art/Digital%20Art/Cover%20page.jpg',
       '/art/Digital%20Art/Doctor%20on%20the%20edge.jpg',
@@ -138,11 +141,24 @@ export const GALLERY: GalleryCategory[] = [
     ]
   },
   {
+    name: 'Inktober 2026',
+    slug: 'inktober-2026',
+    items: [
+      '/art/Inktober%202026/Day_1_Apple.jpg',
+      '/art/Inktober%202026/Day_10_Mystical.jpg',
+      '/art/Inktober%202026/Day_2_Relic.jpg',
+      '/art/Inktober%202026/Day_3_Miniature.jpg',
+      '/art/Inktober%202026/Day_4_Cactus.jpg',
+      '/art/Inktober%202026/Day_5_Smack.jpg',
+      '/art/Inktober%202026/Day_7_Panic.jpg',
+      '/art/Inktober%202026/Day_8_Stinky.jpg',
+    ]
+  },
+  {
     name: 'Mini Art Book Sketches',
     slug: 'mini-art-book-sketches',
     items: [
       '/art/Mini%20Art%20Book%20Sketches/6172471825674211570.jpg',
-      '/art/Mini%20Art%20Book%20Sketches/6172471825674211571.jpg',
       '/art/Mini%20Art%20Book%20Sketches/6172471825674211572.jpg',
       '/art/Mini%20Art%20Book%20Sketches/6172471825674211573.jpg',
       '/art/Mini%20Art%20Book%20Sketches/6172471825674211574.jpg',
@@ -203,6 +219,7 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Photography/6174723625487896906.jpg',
       '/art/Photography/6174723625487896909.jpg',
       '/art/Photography/6183943597422481723.jpg',
+      '/art/Photography/6186195397236166925.jpg',
       '/art/Photography/6289386917145022279.jpg',
       '/art/Photography/6328085551734525389.jpg',
       '/art/Photography/DU.jpg',

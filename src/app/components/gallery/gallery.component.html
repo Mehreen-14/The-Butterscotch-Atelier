@@ -39,7 +39,7 @@
               <video [src]="item.src" muted playsinline preload="metadata"></video>
               <span class="cell-badge video">&#9654; Video</span>
             } @else {
-              <img [src]="item.src" [alt]="item.title" loading="lazy" />
+              <img [src]="item.src" [alt]="item.title" loading="lazy" decoding="async" />
             }
             <span class="cell-badge category">{{ item.category }}</span>
           </button>
