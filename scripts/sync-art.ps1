@@ -172,3 +172,38 @@ foreach ($folder in $folders) {
 
 Set-Content -LiteralPath $dataFile -Value $sb.ToString() -Encoding UTF8
 Write-Host "Synced. Wrote $dataFile"
+
+
+
+# 1. Find the project/source directories.
+
+# 2. Find all artwork category folders.
+
+# 3. Ignore:
+#    node_modules
+#    .git
+#    dist
+#    .vscode
+#    hidden/temp folders.
+
+# 4. Copy profile.jpg to public/profile.jpg.
+
+# 5. For every artwork category:
+#       copy new/updated media files
+#       ↓
+#       optimize large JPG/PNG files.
+
+# 6. Resize images so their largest dimension is at most 1600px.
+
+# 7. Delete files from public/art that no longer exist
+#    in the source.
+
+# 8. Delete destination folders that no longer exist
+#    in the source.
+
+# 9. Scan the final public/art structure.
+
+# 10. Generate gallery-data.ts containing:
+#        category name
+#        slug
+#        media URLs

@@ -1,58 +1,306 @@
-<section class="gallery-hero">
-  <div class="container">
-    <span class="eyebrow">The collection</span>
-    <h1 class="gallery-title">Gallery</h1>
-    <div class="title-rule" aria-hidden="true"><i></i><span></span><i></i></div>
-    
-    <div class="gallery-stats">
-      <span class="stat"><b>{{ totalItems() }}</b>pieces</span>
-      <span class="stat"><b>{{ categories().length }}</b>collections</span>
-    </div>
-  </div>
-</section>
+
+
+<!-- ============ house plants ============ -->
+
+<ng-template #plantTpl let-kind>
+  @switch (kind) {
+
+    @case ('monstera') {
+      <svg class="plant-svg" viewBox="0 -10 100 140" aria-hidden="true">
+        <path d="M50 92 C46 72 34 62 30 54 M50 92 C54 72 66 58 70 46 M50 92 V36" stroke="#3f5a43" stroke-width="3" fill="none" stroke-linecap="round" />
+        <g transform="translate(30 56) rotate(-38)">
+          <path d="M0 0 C-20 -8 -24 -32 0 -44 C24 -32 20 -8 0 0Z" fill="#5a7857" />
+          <path d="M0 0 V-40 M0 -14 L-11 -20 M0 -14 L11 -20 M0 -26 L-9 -32 M0 -26 L9 -32" stroke="#3a5540" stroke-width="1.3" fill="none" />
+        </g>
+        <g transform="translate(70 48) rotate(34)">
+          <path d="M0 0 C-20 -8 -24 -32 0 -44 C24 -32 20 -8 0 0Z" fill="#6a8a64" />
+          <path d="M0 0 V-40 M0 -14 L-11 -20 M0 -14 L11 -20 M0 -26 L-9 -32 M0 -26 L9 -32" stroke="#3a5540" stroke-width="1.3" fill="none" />
+        </g>
+        <g transform="translate(50 38)">
+          <path d="M0 0 C-20 -8 -24 -32 0 -44 C24 -32 20 -8 0 0Z" fill="#4d6b4e" />
+          <path d="M0 0 V-40 M0 -14 L-11 -20 M0 -14 L11 -20 M0 -26 L-9 -32 M0 -26 L9 -32" stroke="#33503a" stroke-width="1.3" fill="none" />
+        </g>
+        <path d="M28 98 H72 L66 128 H34 Z" fill="#e7e2d6" />
+        <path d="M60 98 H72 L66 128 H56 Z" fill="#d6d0c1" />
+        <rect x="24" y="90" width="52" height="9" rx="2" fill="#f2eee4" />
+      </svg>
+    }
+
+    @case ('snake') {
+      <svg class="plant-svg" viewBox="0 -5 100 135" aria-hidden="true">
+        <g transform="translate(50 94)">
+          <path d="M0 0 C-7 -22 -6 -56 -22 -84 C-6 -70 8 -34 7 0Z" transform="rotate(-24)" fill="#3f5d45" stroke="#b7bf86" stroke-width="1.4" />
+          <path d="M0 0 C-7 -22 -6 -60 -2 -90 C6 -60 8 -22 7 0Z" transform="rotate(-8)" fill="#4c6c50" stroke="#b7bf86" stroke-width="1.4" />
+          <path d="M-6 0 C-9 -24 -8 -64 0 -96 C8 -64 9 -24 6 0Z" fill="#324d3a" stroke="#b7bf86" stroke-width="1.4" />
+          <path d="M0 0 C-7 -22 -6 -56 2 -86 C8 -56 8 -22 7 0Z" transform="rotate(10)" fill="#4c6c50" stroke="#b7bf86" stroke-width="1.4" />
+          <path d="M0 0 C-7 -22 -4 -52 22 -76 C8 -50 8 -22 7 0Z" transform="rotate(26)" fill="#3f5d45" stroke="#b7bf86" stroke-width="1.4" />
+        </g>
+        <path d="M28 98 H72 L67 128 H33 Z" fill="#b9b5ab" />
+        <rect x="24" y="90" width="52" height="9" rx="2" fill="#cbc7bd" />
+      </svg>
+    }
+
+    @case ('succulent') {
+      <svg class="plant-svg" viewBox="0 0 70 72" aria-hidden="true">
+        <g transform="translate(35 36)">
+          <g fill="#86a58b">
+            <ellipse cy="-12" rx="7" ry="13" /><ellipse cy="-12" rx="7" ry="13" transform="rotate(60)" />
+            <ellipse cy="-12" rx="7" ry="13" transform="rotate(120)" /><ellipse cy="-12" rx="7" ry="13" transform="rotate(180)" />
+            <ellipse cy="-12" rx="7" ry="13" transform="rotate(240)" /><ellipse cy="-12" rx="7" ry="13" transform="rotate(300)" />
+          </g>
+          <g fill="#a5c1a8">
+            <ellipse cy="-8" rx="5" ry="9" transform="rotate(30)" /><ellipse cy="-8" rx="5" ry="9" transform="rotate(90)" />
+            <ellipse cy="-8" rx="5" ry="9" transform="rotate(150)" /><ellipse cy="-8" rx="5" ry="9" transform="rotate(210)" />
+            <ellipse cy="-8" rx="5" ry="9" transform="rotate(270)" /><ellipse cy="-8" rx="5" ry="9" transform="rotate(330)" />
+          </g>
+          <circle r="4" fill="#d3e2d1" />
+        </g>
+        <path d="M18 48 H52 L48 70 H22 Z" fill="#bf8567" />
+        <rect x="15" y="44" width="40" height="7" rx="2" fill="#cf9879" />
+      </svg>
+    }
+
+    @case ('cactus') {
+      <svg class="plant-svg" viewBox="0 0 60 92" aria-hidden="true">
+        <rect x="24" y="14" width="14" height="60" rx="7" fill="#5d8460" />
+        <rect x="9" y="30" width="10" height="26" rx="5" fill="#5d8460" />
+        <rect x="12" y="48" width="16" height="9" rx="4.5" fill="#5d8460" />
+        <rect x="43" y="22" width="10" height="24" rx="5" fill="#5d8460" />
+        <rect x="34" y="40" width="16" height="9" rx="4.5" fill="#5d8460" />
+        <path d="M31 20 V70 M14 34 V52 M48 26 V42" stroke="#7fa17f" stroke-width="1.4" />
+        <path d="M16 68 H46 L42 90 H20 Z" fill="#e1dbce" />
+        <rect x="13" y="63" width="36" height="7" rx="2" fill="#efeadf" />
+      </svg>
+    }
+
+    @case ('planter') {
+      <svg class="plant-svg" viewBox="0 -4 140 114" aria-hidden="true">
+        <g transform="translate(0 76)">
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" fill="#4b6a4e" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(-20 70 0)" fill="#5a7857" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(20 70 0)" fill="#5a7857" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(-40 70 0) scale(.9)" fill="#6a8a64" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(40 70 0) scale(.9)" fill="#6a8a64" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(-62 70 0) scale(.7)" fill="#7a9a72" />
+          <path d="M70 0 C62 -24 62 -48 70 -70 C78 -48 78 -24 70 0Z" transform="rotate(62 70 0) scale(.7)" fill="#7a9a72" />
+        </g>
+        <rect x="8" y="72" width="124" height="36" rx="2" fill="#3b3f42" />
+        <rect x="8" y="72" width="124" height="6" rx="2" fill="#4b5054" />
+        <rect x="8" y="102" width="124" height="6" fill="#2d3033" />
+      </svg>
+    }
+
+  }
+</ng-template>
+
+<!-- ============ one drawing page / quote page ============ -->
+
+<ng-template #pageTpl let-idx>
+  @if (slides()[idx]; as slide) {
+    @if (slide.kind === 'image') {
+      <div class="page">
+        <button class="page-media" (click)="openPage(idx)" [attr.aria-label]="'View ' + slide.item.title + ' full size'">
+          @if (slide.item.type === 'video') {
+            <video [src]="slide.item.src" autoplay muted loop playsinline></video>
+          } @else {
+            <img [src]="slide.item.src" [alt]="slide.item.title" decoding="async" />
+          }
+        </button>
+        <p class="page-caption">
+          <span class="caption-title">{{ slide.item.title }}</span>
+          <span class="page-no">{{ idx + 1 }} / {{ pages().length }}</span>
+        </p>
+      </div>
+    } @else {
+      <div class="page quote-page">
+        <button class="close-btn" (click)="backToShelf()" aria-label="Close book and return to the shelf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+        <blockquote class="quote">
+          <span class="quote-rule" aria-hidden="true"></span>
+          <p>&ldquo;{{ slide.quote.text }}&rdquo;</p>
+          <footer>{{ slide.quote.artist }}</footer>
+        </blockquote>
+      </div>
+    }
+  }
+</ng-template>
 
 <section class="gallery-body">
   <div class="container">
-    <div class="filter-bar">
-      <button class="filter-chip" [class.active]="activeSlug() === null" (click)="setCategory(null)">
-        All <span class="chip-num">{{ totalItems() }}</span>
-      </button>
-      @for (category of categories(); track category.slug) {
-        <button
-          class="filter-chip"
-          [class.active]="activeSlug() === category.slug"
-          (click)="setCategory(category.slug)">
-          {{ category.name }} <span class="chip-num">{{ category.items.length }}</span>
-        </button>
+
+    @if (view() === 'shelf') {
+
+      <!-- ===================== BOOKSHELF ===================== -->
+      @if (books().length > 0) {
+        <div class="shelves" role="group" aria-label="Gallery collections">
+          @for (row of shelves(); track $index) {
+            <div class="shelf">
+              <div class="shelf-items">
+
+                <div class="plants plants-left" aria-hidden="true">
+                  @for (kind of row.left; track kind) {
+                    <div class="plant" [attr.data-kind]="kind"><ng-container *ngTemplateOutlet="plantTpl; context: { $implicit: kind }" /></div>
+                  }
+                </div>
+
+                <div class="cluster">
+                  @for (g of row.groups; track $index) {
+
+                    @if (g.kind === 'stack' || g.kind === 'flat') {
+                      <div class="stack">
+                        @for (book of g.books; track book.slug; let k = $index) {
+                          <button
+                            class="spine flat"
+                            [style.--c]="book.color"
+                            [style.--fg]="book.fg"
+                            [style.--k]="k"
+                            [style.--delay]="book.index * 50 + 'ms'"
+                            (click)="openBook(book.slug)"
+                            [attr.aria-label]="'Open ' + book.title + ', ' + book.pageCount + ' works'">
+                            <span class="flat-title">{{ book.title }}</span>
+                          </button>
+                        }
+                      </div>
+                    } @else {
+                      @for (book of g.books; track book.slug) {
+                        <button
+                          class="spine upright"
+                          [class.lean]="g.kind === 'lean'"
+                          [style.--c]="book.color"
+                          [style.--fg]="book.fg"
+                          [style.--h]="g.h"
+                          [style.--w]="g.w"
+                          [style.--delay]="book.index * 50 + 'ms'"
+                          (click)="openBook(book.slug)"
+                          [attr.aria-label]="'Open ' + book.title + ', ' + book.pageCount + ' works'">
+                          <span class="spine-title">{{ book.title }}</span>
+                        </button>
+                      }
+                    }
+
+                  }
+                </div>
+
+                <div class="plants plants-right" aria-hidden="true">
+                  @for (kind of row.right; track kind) {
+                    <div class="plant" [attr.data-kind]="kind"><ng-container *ngTemplateOutlet="plantTpl; context: { $implicit: kind }" /></div>
+                  }
+                </div>
+
+              </div>
+              <div class="shelf-board"></div>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="empty-note">Nothing here yet — check back soon.</p>
       }
-    </div>
 
-    @if (visibleItems().length > 0) {
-      <div class="masonry">
-        @for (item of visibleItems(); track item.src; let i = $index) {
-          <button
-            class="art-cell"
-            style="animation-delay: {{ (i % 10) * 45 }}ms"
-            (click)="open(i)"
-            [attr.aria-label]="'View ' + item.title">
-            @if (item.type === 'video') {
-              <video [src]="item.src" muted playsinline preload="metadata"></video>
-              <span class="cell-badge video">&#9654; Video</span>
-            } @else {
-              <img [src]="item.src" [alt]="item.title" loading="lazy" decoding="async" />
-            }
-            <span class="cell-badge category">{{ item.category }}</span>
-          </button>
-        }
-      </div>
     } @else {
-      <p class="empty-note">Nothing here yet — check back soon.</p>
+
+      <!-- ===================== OPEN SKETCHBOOK ===================== -->
+      @if (activeMeta(); as book) {
+        <div class="read-wrap">
+
+          <div class="read-top">
+            <button class="back-link" (click)="backToShelf()">
+              <span aria-hidden="true">&larr;</span> All collections
+            </button>
+            <div class="read-heading">
+              <h2>{{ book.title }}</h2>
+              <p>{{ book.pageCount }} works</p>
+            </div>
+          </div>
+
+          <div class="read-layout" [style.--c]="book.color" [style.--fg]="book.fg">
+
+            <!-- sidebar: every drawing in this book -->
+            <aside class="sidebar" aria-label="All works in this collection">
+              <h3 class="sidebar-title">Works <span>{{ pages().length }}</span></h3>
+              <div class="sidebar-list">
+                @for (item of pages(); track item.src; let i = $index) {
+                  <button
+                    class="thumb"
+                    [class.active]="view() === 'reading' && currentPage() === i"
+                    [attr.aria-current]="view() === 'reading' && currentPage() === i ? 'page' : null"
+                    [attr.aria-label]="'Go to page ' + (i + 1) + ': ' + item.title"
+                    (click)="goToPage(i)">
+                    @if (item.type === 'video') {
+                      <video [src]="item.src" muted playsinline preload="metadata"></video>
+                      <span class="thumb-play" aria-hidden="true">&#9654;</span>
+                    } @else {
+                      <img [src]="item.src" [alt]="''" loading="lazy" decoding="async" />
+                    }
+                    <span class="thumb-no">{{ i + 1 }}</span>
+                  </button>
+                }
+              </div>
+            </aside>
+
+            <!-- the book -->
+            <div class="book-col">
+              <div class="stage" [class.reading]="view() === 'reading'">
+
+                <div class="pages">
+                  <ng-container *ngTemplateOutlet="pageTpl; context: { $implicit: baseIndex() }" />
+
+                  @if (turn(); as t) {
+                    <div class="leaf" [class.next]="t.dir === 'next'" [class.prev]="t.dir === 'prev'" inert aria-hidden="true">
+                      <div class="leaf-face leaf-front">
+                        <ng-container *ngTemplateOutlet="pageTpl; context: { $implicit: leafIndex() }" />
+                      </div>
+                      <div class="leaf-face leaf-back"></div>
+                    </div>
+                  }
+                </div>
+
+                <!-- front cover -->
+                <div class="cover-leaf" [class.open]="view() === 'reading'" [attr.inert]="view() === 'reading' ? '' : null">
+                  <div class="cover-front">
+                    <span class="cover-kicker">Sketchbook</span>
+                    <div class="cover-art">
+                      @if (book.cover) {
+                        @if (isVideo(book.cover)) {
+                          <video [src]="book.cover" muted playsinline preload="metadata"></video>
+                        } @else {
+                          <img [src]="book.cover" [alt]="book.title" decoding="async" />
+                        }
+                      }
+                    </div>
+                    <h2 class="cover-title">{{ book.title }}</h2>
+                    <p class="cover-count">{{ book.pageCount }} works</p>
+                    <button class="show-btn" (click)="showBook()">
+                      <span>Show</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </button>
+                  </div>
+                  <div class="cover-back"></div>
+                </div>
+
+                <!-- wire binding -->
+                <span class="spiral" aria-hidden="true"></span>
+              </div>
+
+              @if (view() === 'reading') {
+                <div class="pager">
+                  <button class="pager-btn" (click)="turnPage('prev')" [disabled]="isFirst() || isTurning()" aria-label="Previous page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+                  </button>
+                  <span class="pager-count">
+                    @if (isLast()) { End } @else { Page {{ currentPage() + 1 }} of {{ pages().length }} }
+                  </span>
+                  <button class="pager-btn" (click)="turnPage('next')" [disabled]="isLast() || isTurning()" aria-label="Next page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+
     }
 
-    @if (activeSlug() !== null) {
-      <div class="clear-filter">
-        <a class="btn btn-ghost" (click)="setCategory(null)">Show all collections</a>
-      </div>
-    }
   </div>
 </section>

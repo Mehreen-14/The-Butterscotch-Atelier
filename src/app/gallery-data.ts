@@ -130,6 +130,9 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Digital%20Art/Starry%20night%20with%20tent.jpg',
       '/art/Digital%20Art/Utsob2.jpg',
       '/art/Digital%20Art/Your%20paragraph%20text.jpg',
+      '/art/Digital%20Art/Balloons.jpg',
+      '/art/Digital%20Art/Boat.jpg',
+      '/art/Digital%20Art/Jellyfish.jpg'
     ]
   },
   {
@@ -231,6 +234,9 @@ export const GALLERY: GalleryCategory[] = [
     name: 'ScrapBook',
     slug: 'scrapbook',
     items: [
+      '/art/ScrapBook/Black journal.jpg',
+      '/art/ScrapBook/Lavender journal.jpg',
+      '/art/ScrapBook/Green Journal.jpg',
       '/art/ScrapBook/20260924_144720.jpg',
       '/art/ScrapBook/20260924_144738.jpg',
       '/art/ScrapBook/20260924_144804.jpg',
@@ -264,6 +270,8 @@ export const GALLERY: GalleryCategory[] = [
       '/art/ScrapBook/6174723625487896938.jpg',
       '/art/ScrapBook/6174723625487896939.jpg',
       '/art/ScrapBook/6174723625487896940.jpg',
+      '/art/ScrapBook/JOURNAL.jpg',
+      '/art/ScrapBook/Yellow journal.jpg',
     ]
   },
   {
@@ -291,6 +299,26 @@ export const GALLERY: GalleryCategory[] = [
       '/art/Typography/areh_chacha_apne.jpg',
       '/art/Typography/Coffee%20house.jpg',
       '/art/Typography/fa5fe075f52f71520458711105a665dd.jpg',
+      'art/Typography/রিকশা.jpg',
+      'art/Typography/Dishahara.jpg'
+    ]
+  },
+  {
+    name : 'Stamp',
+    slug : 'stamp',
+    items: [
+      'art/Stamp/Palestine.png',
+      'art/Stamp/Bangladesh stamp-Photoroom.png'
+    ]
+  },
+  {
+    name: 'Food Art',
+    slug : 'food-art',
+    items: [
+      'art/Food%20Art/Momo.jpg',
+      'art/Food%20Art/Biryani.jpg', 
+      'art/Food%20Art/Chocolate cake.jpg',
+      'art/Food%20Art/Ramen.jpg',  
     ]
   },
   {
